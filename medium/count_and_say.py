@@ -7,8 +7,9 @@ class Solution(object):
         """
 
         result = "1"
-        for i in range(n-1):
+        for i in range(n):
             result = self.get_rle(result)
+
         return result
     
     def get_rle(self, text: str) -> str:
@@ -25,6 +26,7 @@ class Solution(object):
         return result + f"{count}{last_ch}"
 
 if __name__ == "__main__":
-    print(Solution().countAndSay(4))
-
+    print(Solution().get_rle("3322251"))
+    # n = input()
+    # print(Solution().countAndSay(n))
     
